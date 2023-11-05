@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "Avro",
+  "fields": [
+    {
+      "name": "truck_id",
+      "type": "int"
+    },
+    {
+      "name": "journey_id",
+      "type": "int"
+    },
+    {
+      "name": "route_geography",
+      "type": "string"
+    }
+  ]
+}

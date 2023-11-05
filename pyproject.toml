@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "iot-project"
+version = "0.1.0"
+description = "Simulation of the work of Truck Tracking System"
+authors = ["Rostyslav Borovyk <rrostyslavborovyk@gmail.com>"]
+readme = "README.md"
+packages = [{include = "iot_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.0"
+uvicorn = "^0.23.2"
+gcloud-aio-pubsub = "^6.0.0"
+polyline = "^2.0.1"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+pytelegrambotapi = "^4.14.0"
+httpx = "^0.25.1"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.6.1"
+ruff = "^0.1.3"
+black = "^23.10.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+exclude = [
+    'venv/*',
+]
+
+[tool.ruff]
+# Refer to this rules if you need to config any submodule with ruff: https://beta.ruff.rs/docs/rules/
+
+select = [
+#    "E",    # pycodestyle errors,
+#    "W",    # pycodestyle warnings
+#    "F",    # pyflakes
+    "I",    # isort
+#    "N",    # pep8-naming
+#    "T20",  # flake8-print
+#    "Q",    # flake8-quotes
+#    "B",    # flake8-bugbear
+#    "C",    # flake8-comprehensions
+#    "S",    # flake8-bandit
+#    "ANN",  # flake8-annotations
+#    "COM",  # flake8-commas
+##    "A",   # flake8-builtins, TBD(discussed), many uses builtin names for variables
+#    "C4",   # flake8-comprehensions
+#    "DTZ",  # flake8-datetimez
+#    "PIE",  # flake8-pie
+#    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+##    "TCH", # flake8-type-checking, enable once we agree, it may be too strict (although it helps even with circular imports)
+#    "C90",  # mccabe
+#    "UP",   # pyupgrade
+#    "ERA",  # eradicate, checks for commented out code
+##    "ARG", # flake8-unused-arguments  (not all options available https://pypi.org/project/flake8-unused-arguments/)
+]

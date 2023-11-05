@@ -1,0 +1,22 @@
+services:
+  tts-api:
+    container_name: tts-server
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: tts-server.Dockerfile
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+
+  notifications-api:
+    container_name: notifications-server
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: notifications-server.Dockerfile
+    ports:
+      - "80:80"
+    env_file:
+      - .env

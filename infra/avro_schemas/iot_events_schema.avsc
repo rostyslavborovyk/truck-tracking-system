@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "Avro",
+  "fields": [
+    {
+      "name": "truck_id",
+      "type": "int"
+    },
+    {
+      "name": "lat",
+      "type": "float"
+    },
+    {
+      "name": "lon",
+      "type": "float"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    }
+  ]
+}
