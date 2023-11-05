@@ -1,6 +1,6 @@
 # Simulation of Truck Tracking System
 
-## Descriptions of the flow
+## Description of the flow
 
 1. Customer sends an delivery request event
 2. The tracking system finds the appropriate truck that can handle the specified weight load
@@ -59,11 +59,9 @@
   - [x] Describe big query resources
 - [x] Implement the selection of appropriate truck based on the weight of delivery request
   - [x] Add event if no truck with appropriate load capabilities was found
-  - [ ] ~~Implement the selection of appropriate truck based on the truck's current location~~
 - [x] Add a script to automatically trigger delivery requests
 - [x] Add email/messenger notifications, when some logs occur
 - [x] Run the simulation on cloud run instance
-- [ ] Improve the publishing of journey track events to publish them in batches
 
 
 ## Links
