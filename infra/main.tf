@@ -48,7 +48,7 @@ resource "google_secret_manager_secret_version" "maps_api_token_secret_version_d
 resource "google_secret_manager_secret_iam_member" "maps_api_token_secret_access" {
   secret_id  = google_secret_manager_secret.maps_api_token.id
   role       = "roles/secretmanager.secretAccessor"
-  member     = "serviceAccount:${var.sa_name}"
+  member     = "serviceAccount:${google_service_account.service_account.email}"
   depends_on = [google_secret_manager_secret.maps_api_token]
 }
 
@@ -67,7 +67,7 @@ resource "google_secret_manager_secret_version" "telegram_api_token_secret_versi
 resource "google_secret_manager_secret_iam_member" "telegram_api_token_secret_access" {
   secret_id  = google_secret_manager_secret.telegram_api_token.id
   role       = "roles/secretmanager.secretAccessor"
-  member     = "serviceAccount:${var.sa_name}"
+  member     = "serviceAccount:${google_service_account.service_account.email}"
   depends_on = [google_secret_manager_secret.telegram_api_token]
 }
 
@@ -75,7 +75,7 @@ resource "google_secret_manager_secret_iam_member" "telegram_api_token_secret_ac
 # IAM service accounts
 
 resource "google_service_account" "service_account" {
-  account_id = "iot-project-sa"
+  account_id = "cloud-computing-project-sa"
   project    = var.project
 }
 

@@ -1,7 +1,4 @@
-# project = "static-concept-260717"
 project = "cloud-computing-project-403820"
-#sa_account_file =  "terraform-sa.json"
 sa_account_file = "new-terraform-sa.json"
 region          = "europe-central-2"
 location        = "europe-central2"
-sa_name         = "simulation-sa@cloud-computing-project-403820.iam.gserviceaccount.com"
